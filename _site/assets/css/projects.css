@@ -1,0 +1,26 @@
+.carousel {
+  background-color: black;
+}
+.card {
+  background-color: white;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+}
+.carousel-control-prev::before,
+.carousel-control-next::before {
+  content: "";
+  display: inline-block;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
+  border-left: 0.5em solid;
+  color: white;
+}
+.carousel-control-next::before {
+  transform: rotate(180deg);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: white;
+}
