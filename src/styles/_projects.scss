@@ -2,12 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
-  @media only screen and (min-width: $cut) {
-    width: 80%;
-  }
+  padding: 0 100px;
+  margin-bottom: 50px;
+  background: $main;
 }
 
 .user-projects {
@@ -80,23 +77,51 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out,
+    border-color 0.3s ease-out;
   &:hover {
     background-color: $purple;
     border-color: $purple;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in,
+      border-color 0.3s ease-in;
   }
   &:active {
     background-color: $purple;
     border-color: $purple;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.3s ease-in, background-color 0.3s ease-in,
+      border-color 0.3s ease-in;
   }
+}
+
+.carousel {
+  background-color: black;
+
+  &-control-prev-icon,
+  &-control-next-icon {
+    background-image: none;
+  }
+
+  &-control-prev,
+  &-control-next {
+    background-color: white;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      border-top: 0.5em solid transparent;
+      border-bottom: 0.5em solid transparent;
+      border-left: 0.5em solid;
+      color: white;
+    }
+
+    &-next::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.card {
+  background-color: white;
 }
