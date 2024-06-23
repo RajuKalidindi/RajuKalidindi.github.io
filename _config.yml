@@ -21,8 +21,6 @@ description: >
   Hello, I'm Ramana Krishnam Raju Kalidindi, a passionate Software Engineer based in Bristol. I hold a Master's degree in Computing Science from the University of Glasgow and a Bachelor's degree in Computer Science from the International Institute of Information Technology, Bhubaneswar.
   <br><br>
   With extensive experience in web and mobile development, I have worked with technologies like React, TypeScript, AWS, Laravel, Python, and GraphQL. I have a solid foundation in Android development and have designed responsive user interfaces using Angular.
-  <br><br>
-  My interests span across virtual reality, game development, augmented reality, and front-end development. Outside of work, I enjoy traveling, cooking, playing cricket and football, and I'm a dedicated Real Madrid supporter.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

@@ -3892,7 +3892,7 @@ sup {
 #about {
   width: 90%;
   margin: 0 auto;
-  padding: 0em 0em 3.75em 0em;
+  padding: 0em 0em 5em 0em;
 }
 @media only screen and (min-width: 550px) {
   #about {
@@ -3923,24 +3923,55 @@ sup {
     font-size: 75px;
   }
 }
+.orange-text {
+  color: rgb(255 124 48);
+  font-weight: bold;
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.animated-cursor {
+  border-right: 2px solid rgb(255 124 48);
+  animation: blink 0.75s step-end infinite;
+}
 .user-details {
   text-align: center;
   margin: 5px auto;
   clear: both;
 }
-.profile-img {
-  flex: 0 0 30%;
-  max-width: 30%;
-  width: 450px;
-  /* height: 450px; */
-  margin: 50px;
-  height: auto;
-  object-fit: contain;
-}
 .description {
   flex: 1;
   padding-top: 30px;
   padding-right: 20px;
+}
+.resume-card {
+  flex: 0 0 30%;
+  max-width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 300px;
+  border-radius: 5px;
+  text-align: center;
+  /* background-color: #1c6aca; */
+  margin: 50px;
+  padding: 20px;
+}
+.resume-card img.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+.resume-card .download-resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 p {
   font-size: 20px;

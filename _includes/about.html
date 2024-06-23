@@ -1,12 +1,75 @@
 <div class="user-details">
-  <h1>About Me</h1>
+  <h1>About</h1>
 </div>
 <div class="content-container">
   <div class="description">
     <p>{{site.description}}</p>
+    <p>
+      My interests span across
+      <span id="animatedText" class="orange-text"></span>
+    </p>
+    <p>
+      Outside of work, I enjoy traveling, cooking, hiking, football and cricket.
+    </p>
   </div>
-  <img
-    class="profile-img"
-    src="{{ '/assets/img/PhotoID.jpg' | prepend: site.baseurl }}"
-  />
+  <div class="resume-card">
+    <img
+      class="profile-img"
+      src="{{ '/assets/img/PhotoID.jpg' | prepend: site.baseurl }}"
+      alt="Profile Image"
+    />
+    <a
+      href="{{ '/assets/resume/Resume.pdf' | prepend: site.baseurl }}"
+      download="Resume.pdf"
+      class="download-resume-btn"
+    >
+      Download Resume
+    </a>
+  </div>
 </div>
+
+<script>
+  function startTypingEffect(phrases, elementId) {
+    let currentPhrase = 0;
+    let currentLetter = 0;
+    const textElement = document.getElementById(elementId);
+    const typingSpeed = 150;
+    const deletingSpeed = 75;
+    const pauseTime = 1500;
+
+    function typePhrase() {
+      if (currentLetter < phrases[currentPhrase].length) {
+        textElement.innerHTML =
+          phrases[currentPhrase].substring(0, currentLetter + 1) +
+          '<span class="animated-cursor"></span>';
+        currentLetter++;
+        setTimeout(typePhrase, typingSpeed);
+      } else {
+        setTimeout(deletePhrase, pauseTime);
+      }
+    }
+
+    function deletePhrase() {
+      if (currentLetter > 0) {
+        textElement.innerHTML =
+          phrases[currentPhrase].substring(0, currentLetter - 1) +
+          '<span class="animated-cursor"></span>';
+        currentLetter--;
+        setTimeout(deletePhrase, deletingSpeed);
+      } else {
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        setTimeout(typePhrase, typingSpeed);
+      }
+    }
+
+    typePhrase();
+  }
+
+  const phrases = [
+    "front-end development. ",
+    "virtual reality. ",
+    "game development. ",
+    "data analysis. ",
+  ];
+  startTypingEffect(phrases, "animatedText");
+</script>
