@@ -1,5 +1,12 @@
-<h1 class="user-details"> About Me </h1>
-<img src="{{ "/assets/img/pic.jpg" | prepend: site.baseurl }}" />
-<div>
-  <p> {{site.description}}</p>
+<div class="user-details">
+  <h1>About Me</h1>
+</div>
+<div class="content-container">
+  <div class="description">
+    <p>{{site.description}}</p>
+  </div>
+  <img
+    class="profile-img"
+    src="{{ '/assets/img/PhotoID.jpg' | prepend: site.baseurl }}"
+  />
 </div>
