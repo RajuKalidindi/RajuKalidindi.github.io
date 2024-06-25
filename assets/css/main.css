@@ -4301,6 +4301,17 @@ p {
   background-color: #79589f;
   border: 1px solid #6f42c1;
 }
+.text-center {
+  text-align: center;
+}
+
+.row-start {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 #certificationsCarousel {
   position: relative;
@@ -4319,6 +4330,12 @@ p {
 
 .carousel-control-next {
   right: 10px;
+}
+
+.carousel-image {
+  width: 340px;
+  height: 240px;
+  object-fit: fill;
 }
 
 .contact-me-container {

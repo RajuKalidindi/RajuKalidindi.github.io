@@ -57,84 +57,37 @@
     </div>
   </div>
 
-  <!-- Certifications Column -->
+  <!-- Certificates Column -->
+  {% assign certificates = site.data.certificates %} {% assign
+  certificates_per_slide = 4 %}
+
   <div class="certifications-column">
-    <h2 class="white padding-top-none">Certifications</h2>
+    <h2 class="white padding-top-none text-center">Certificates</h2>
     <div
       id="certificationsCarousel"
       class="carousel slide"
       data-ride="carousel"
     >
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row ml-3 mr-3 mt-2 mb-2">
+        {% for i in (0..certificates.size) %} {% assign mod = i | modulo:
+        certificates_per_slide %} {% if mod == 0 %}
+        <div class="carousel-item {% if i == 0 %}active{% endif %}">
+          {% endif %} {% if mod == 0 or mod == 2 %}
+          <div class="row-start ml-3 mr-3 mt-2 mb-2">
+            {% endif %} {% if i < certificates.size %}
             <div class="col-md-6">
               <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 1"
-                class="img-fluid"
+                src="{{ certificates[i].src | prepend: site.baseurl }}"
+                alt="{{ certificates[i].alt }}"
+                class="img-fluid carousel-image"
               />
             </div>
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 2"
-                class="img-fluid"
-              />
-            </div>
+            {% endif %} {% if mod == 1 or mod == 3 or i == certificates.size |
+            minus: 1 %}
           </div>
-          <div class="row ml-3 mr-3 mt-2 mb-2">
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 3"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 4"
-                class="img-fluid"
-              />
-            </div>
-          </div>
+          {% endif %} {% if mod == 3 or i == certificates.size | minus: 1 %}
         </div>
-        <div class="carousel-item">
-          <div class="row ml-3 mr-3 mt-2 mb-2">
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 3"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 4"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-          <div class="row ml-3 mr-3 mt-2 mb-2">
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 3"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="{{ '/assets/img/logo.jpg' | prepend: site.baseurl }}"
-                alt="Certification 4"
-                class="img-fluid"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- Add more carousel items as needed -->
+        {% endif %} {% endfor %}
       </div>
       <button
         class="carousel-control-prev"
