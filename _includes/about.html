@@ -1,9 +1,13 @@
 <div class="user-details">
-  <h1>About</h1>
+  <h1><i class="icon fa fa-user-circle-o mr-3"></i> About Me</h1>
 </div>
 <div class="content-container">
   <div class="description">
-    <p>{{site.description}}</p>
+    <p>
+      Hello, I'm
+      <span class="orange-text">Ramana Krishnam Raju Kalidindi</span
+      >{{site.description}}
+    </p>
     <p>
       My interests span across
       <span id="animatedText" class="orange-text"></span>
@@ -67,9 +71,12 @@
 
   const phrases = [
     "front-end development. ",
+    "full-stack development. ",
+    "android development. ",
     "virtual reality. ",
     "game development. ",
     "data analysis. ",
+    "data visualization. ",
   ];
   startTypingEffect(phrases, "animatedText");
 </script>

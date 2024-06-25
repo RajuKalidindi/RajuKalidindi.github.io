@@ -18,9 +18,9 @@ email: krkraju997@gmail.com
 username: Raju Kalidindi
 user_title: Software Engineer
 description: >
-  Hello, I'm Ramana Krishnam Raju Kalidindi, a passionate Software Engineer based in Bristol. I hold a Master's degree in Computing Science from the University of Glasgow and a Bachelor's degree in Computer Science from the International Institute of Information Technology, Bhubaneswar.
+  , a dedicated and skilled Software Engineer with 2.5 years of industry experience based in Bristol. I am passionate about leveraging technology to solve complex problems and am always eager to learn and adopt new tools and methodologies.
   <br><br>
-  With extensive experience in web and mobile development, I have worked with technologies like React, TypeScript, AWS, Laravel, Python, and GraphQL. I have a solid foundation in Android development and have designed responsive user interfaces using Angular.
+  With extensive experience in web and mobile development, I have recently worked with technologies like React, TypeScript, AWS, Laravel, Python, and GraphQL. I have a solid foundation in Android development with Kotlin and Java and have designed responsive user interfaces using Angular.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
