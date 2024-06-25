@@ -4243,7 +4243,7 @@ p {
   }
 }
 
-#skills-certifications {
+#skills-certificates {
   background: #1a222c;
   color: #fff;
   padding: 0em 1em 3.75em 1em;
@@ -4261,7 +4261,7 @@ p {
 .purple-text {
   color: #79589f;
 }
-.skills-certifications-container {
+.skills-certificates-container {
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -4270,7 +4270,7 @@ p {
   flex: 0 0 30%;
 }
 
-.certifications-column {
+.certificates-column {
   flex: 0 0 60%;
 }
 
@@ -4313,7 +4313,7 @@ p {
   -webkit-overflow-scrolling: touch;
 }
 
-#certificationsCarousel {
+#certificatesCarousel {
   position: relative;
 }
 

@@ -1,10 +1,10 @@
 <div class="user-details">
   <h1 class="padding-top white">
     <i class="icon fa fa-gear mr-3"></i> Skills
-    <span class="purple-text">&</span> Certifications
+    <span class="purple-text">&</span> Certificates
   </h1>
 </div>
-<div class="skills-certifications-container">
+<div class="skills-certificates-container">
   <!-- Skills Column -->
   <div class="skills-column">
     <h2 class="white padding-top-none">Skills</h2>
@@ -61,13 +61,9 @@
   {% assign certificates = site.data.certificates %} {% assign
   certificates_per_slide = 4 %}
 
-  <div class="certifications-column">
+  <div class="certificates-column">
     <h2 class="white padding-top-none text-center">Certificates</h2>
-    <div
-      id="certificationsCarousel"
-      class="carousel slide"
-      data-ride="carousel"
-    >
+    <div id="certificatesCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         {% for i in (0..certificates.size) %} {% assign mod = i | modulo:
         certificates_per_slide %} {% if mod == 0 %}
@@ -92,7 +88,7 @@
       <button
         class="carousel-control-prev"
         type="button"
-        data-target="#certificationsCarousel"
+        data-target="#certificatesCarousel"
         data-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -101,7 +97,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-target="#certificationsCarousel"
+        data-target="#certificatesCarousel"
         data-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
