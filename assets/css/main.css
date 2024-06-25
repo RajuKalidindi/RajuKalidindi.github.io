@@ -3959,7 +3959,6 @@ sup {
   width: 300px;
   border-radius: 5px;
   text-align: center;
-  /* background-color: #1c6aca; */
   margin: 50px;
   padding: 20px;
 }
@@ -4491,6 +4490,18 @@ p {
     padding-right: 0;
     margin-bottom: 30px;
   }
+}
+
+.icon-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.icon-button img {
+  font-size: 24px;
+  height: 30px;
+  vertical-align: middle;
 }
 
 .footer {
