@@ -23,8 +23,8 @@
       alt="Profile Image"
     />
     <a
-      href="{{ '/assets/resume/Resume.pdf' | prepend: site.baseurl }}"
-      download="Resume.pdf"
+      href="{{ '/assets/resume/Ramana_resume.pdf' | prepend: site.baseurl }}"
+      download="Ramana_resume.pdf"
       class="download-resume-btn"
     >
       Download Resume
@@ -37,9 +37,9 @@
     let currentPhrase = 0;
     let currentLetter = 0;
     const textElement = document.getElementById(elementId);
-    const typingSpeed = 150;
-    const deletingSpeed = 75;
-    const pauseTime = 1500;
+    const typingSpeed = 50;
+    const deletingSpeed = 25;
+    const pauseTime = 1000;
 
     function typePhrase() {
       if (currentLetter < phrases[currentPhrase].length) {

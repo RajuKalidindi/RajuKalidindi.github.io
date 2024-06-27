@@ -23,7 +23,7 @@ section {
 }
 h1 {
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 1000;
   margin: 0.67em 0;
 }
 figure {
@@ -3676,7 +3676,9 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #555;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 article,
 aside,
@@ -3706,7 +3708,7 @@ strong.white {
   color: white;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 h2 {
   font-size: 2rem;
@@ -3790,9 +3792,10 @@ sup {
   margin: 0 auto;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 .header .site-title {
-  font-size: 50px;
+  font-size: 70px;
   display: block;
   line-height: 1;
   color: #fff;
@@ -3800,15 +3803,16 @@ sup {
 @media only screen and (min-width: 550px) {
   .header .site-title {
     margin: 0;
-    font-size: 100px;
+    font-size: 120px;
   }
 }
 .header .site-description {
-  font-size: 20px;
+  font-size: 35px;
   display: block;
   line-height: 1;
   color: #fff;
   margin-top: 10px;
+  width: 100%;
 }
 @media only screen and (min-width: 550px) {
   .header .site-description {
@@ -3907,6 +3911,8 @@ sup {
 .content-container {
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .tech {
   margin: 10px;
@@ -3980,6 +3986,18 @@ sup {
 p {
   font-size: 20px;
 }
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column-reverse;
+  }
+  .resume-card {
+    margin: 0px;
+    max-width: 60%;
+  }
+  .description {
+    padding-right: 0px;
+  }
+}
 #projects {
   display: flex;
   flex-direction: column;
@@ -4013,7 +4031,7 @@ p {
 
   .card {
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
   }
 }
 
@@ -4026,12 +4044,15 @@ p {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  max-width: 250px;
+  max-width: 400px;
 }
 
 .card-img-top {
-  width: 100%;
-  height: auto;
+  min-width: 250px;
+  max-width: 450px;
+  min-height: 250px;
+  max-height: 300px;
+  object-fit: fill;
 }
 
 .card-body {
@@ -4161,7 +4182,6 @@ p {
 
 .education-title {
   text-align: center;
-  font-size: 2.5em;
   margin-bottom: 30px;
 }
 
@@ -4225,8 +4245,60 @@ p {
   font-size: 16px;
   text-align: center;
 }
+@media (max-width: 576px) {
+  .education-cards {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .education-card {
+    width: 100%;
+  }
+}
+.education-card .info-button {
+  display: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
 
 @media (max-width: 768px) {
+  .education-card .important-courses {
+    display: none;
+  }
+  .education-card .info-button {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .education-card .info-button,
+  .education-card .close-button {
+    display: none;
+  }
+  .education-card .important-courses {
+    display: block;
+  }
+}
+
+.close-button {
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* .education-card .important-courses {
+  display: none;
+} */
+
+@media (max-width: 1000px) {
   .education-content {
     flex-direction: column;
   }
@@ -4234,6 +4306,10 @@ p {
   .education-cards,
   .education-gif {
     width: 100%;
+  }
+
+  .education-cards {
+    margin-left: 0px;
   }
 
   .education-gif {
@@ -4335,6 +4411,16 @@ p {
   width: 340px;
   height: 240px;
   object-fit: fill;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .skills-certificates-container {
+    flex-direction: column;
+  }
+  .skills-header {
+    margin-top: 0;
+  }
 }
 
 .contact-me-container {
@@ -4400,7 +4486,6 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: Arial, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -4484,18 +4569,28 @@ p {
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
+    padding: 0px 20px;
   }
 
   .contact-info {
     padding-right: 0;
     margin-bottom: 30px;
   }
+  .contact-form-card {
+    width: 100%;
+  }
+  .contact-me-container {
+    padding-bottom: 4em;
+  }
+  .connect-header {
+    margin-top: 0;
+  }
 }
 
 .icon-buttons-container {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  width: 100%;
 }
 
 .icon-button img {

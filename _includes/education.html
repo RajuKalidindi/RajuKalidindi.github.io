@@ -12,13 +12,15 @@
         />
         <div class="card-content">
           <h2 class="institution">University of Glasgow</h2>
-          <p class="institution-content">
+          <p class="institution-content main-content">
             Completed Master of Science in Computing Science (2021-2022).
           </p>
-          <p class="institution-content">
+          <button class="info-button">Info</button>
+          <p class="institution-content important-courses">
             <span class="orange-text">Important Courses:</span> <br />
             Data Science, Big Data, Information Retrieval, Web Science, Deep
-            Learning
+            Learning <br />
+            <button class="close-button">Close</button>
           </p>
         </div>
       </div>
@@ -30,13 +32,15 @@
         />
         <div class="card-content">
           <h2 class="institution">IIIT Bhubaneswar</h2>
-          <p class="institution-content">
+          <p class="institution-content main-content">
             Completed Bachelor of Technology in Computer Science (2016-2020).
           </p>
-          <p class="institution-content">
+          <button class="info-button">Info</button>
+          <p class="institution-content important-courses">
             <span class="orange-text">Important Courses:</span> <br />
             Data Structures, Relational Databases, System Design, Internet of
-            Technology, Digital Image Processing, Cryptography
+            Technology, Digital Image Processing, Cryptography <br />
+            <button class="close-button">Close</button>
           </p>
         </div>
       </div>
@@ -48,13 +52,15 @@
         />
         <div class="card-content">
           <h2 class="institution">Timpany School</h2>
-          <p class="institution-content">
+          <p class="institution-content main-content">
             Completed education from Kindergarten through Standard XII
             (2002-2016).
           </p>
-          <p class="institution-content">
+          <button class="info-button">Info</button>
+          <p class="institution-content important-courses">
             <span class="orange-text">Important Courses:</span> <br />
-            Computer Science, Maths, Physics, Chemistry, English
+            Computer Science, Maths, Physics, Chemistry, English <br />
+            <button class="close-button">Close</button>
           </p>
         </div>
       </div>
@@ -68,3 +74,56 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const infoButtons = document.querySelectorAll(".info-button");
+    const closeButtons = document.querySelectorAll(".close-button");
+
+    function toggleContent(card, showImportantCourses) {
+      const importantCourses = card.querySelector(".important-courses");
+      const mainContent = card.querySelector(".main-content");
+      const infoButton = card.querySelector(".info-button");
+
+      if (showImportantCourses) {
+        importantCourses.style.display = "block";
+        mainContent.style.display = "none";
+        infoButton.style.display = "none";
+      } else {
+        importantCourses.style.display = "none";
+        mainContent.style.display = "block";
+        infoButton.style.display = "block";
+      }
+    }
+
+    infoButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const card = button.closest(".education-card");
+        toggleContent(card, true);
+      });
+    });
+
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const card = button.closest(".education-card");
+        toggleContent(card, false);
+      });
+    });
+
+    function initializeState() {
+      const cards = document.querySelectorAll(".education-card");
+      cards.forEach((card) => {
+        if (window.innerWidth <= 768) {
+          toggleContent(card, false);
+        } else {
+          card.querySelector(".important-courses").style.display = "block";
+          card.querySelector(".main-content").style.display = "block";
+          card.querySelector(".info-button").style.display = "none";
+          card.querySelector(".close-button").style.display = "none";
+        }
+      });
+    }
+
+    initializeState();
+    window.addEventListener("resize", initializeState);
+  });
+</script>
