@@ -4005,6 +4005,9 @@ sup {
   padding-top: 30px;
   padding-right: 20px;
 }
+.about {
+  font-size: 22px;
+}
 .resume-card {
   flex: 0 0 30%;
   max-width: 30%;
@@ -4063,6 +4066,11 @@ p {
   -webkit-overflow-scrolling: touch;
 }
 
+.carousel-item .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .col-md-3 {
   display: flex;
   justify-content: center;
@@ -4093,6 +4101,8 @@ p {
   justify-content: space-between;
   width: 100%;
   max-width: 400px;
+  height: 95%;
+  min-height: 500px;
 }
 
 .card-img-top {
@@ -4341,10 +4351,6 @@ p {
   font-size: 14px;
   margin-top: 10px;
 }
-
-/* .education-card .important-courses {
-  display: none;
-} */
 
 @media (max-width: 1000px) {
   .education-content {

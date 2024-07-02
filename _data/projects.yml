@@ -1,0 +1,111 @@
+- title: BikeStop
+  image: BikeStop.png
+  description: A bike renting platform built using python flask.
+  technologies:
+    - Python
+    - HTML
+    - CSS
+  github: https://github.com/RajuKalidindi/BikeStop
+  live_link:
+
+- title: Memory Game
+  image: memory-game.png
+  description: A memory game with minor animations.
+  technologies:
+    - HTML
+    - CSS
+    - Javascript
+  github: https://github.com/RajuKalidindi/Memory-Game
+  live_link: https://rajukalidindi.github.io/Memory-Game/
+
+- title: DinoScraper
+  image: logo.jpg
+  description: A python webscraper to scrape for dinosaur data.
+  technologies:
+    - Python
+    - mongoDB
+  github: https://github.com/RajuKalidindi/Dino-Scraper
+  live_link:
+
+- title: RingAuth
+  image: logo.jpg
+  description: A user authentication system built for VR headset.
+  technologies:
+    - C#
+    - Unity
+    - Blender
+  github: https://github.com/RajuKalidindi/Masters-Dissertation
+  live_link:
+
+- title: ASCII-Generator
+  image: logo.jpg
+  description: An image generator that generates ASCII images in color & b/w.
+  technologies:
+    - Python
+  github: https://github.com/RajuKalidindi/ASCII-generator
+  live_link:
+
+- title: Fire Alert
+  image: logo.jpg
+  description: A fire alarm system that sends a slack alert.
+  technologies:
+    - Typescript
+    - Arduino
+  github: https://github.com/RajuKalidindi/alert-tool
+  live_link:
+
+- title: Doodle Jump
+  image: logo.jpg
+  description: A recreation of the famous doodle jump game.
+  technologies:
+    - C#
+    - Unity
+  github: https://github.com/RajuKalidindi/Doodle-Jump
+  live_link:
+
+- title: Weather App
+  image: logo.jpg
+  description: An android weather app using openweather api.
+  technologies:
+    - Java
+    - REST Api
+  github: https://github.com/RajuKalidindi/alert-tool
+  live_link:
+
+- title: Dictionary
+  image: logo.jpg
+  description: A dictionary that provides suggestions for the typos.
+  technologies:
+    - Python
+  github: https://github.com/RajuKalidindi/Dictionary
+  live_link:
+
+- title: Cubix
+  image: logo.jpg
+  description: A cube runner game where the objective is to avoid obstacles.
+  technologies:
+    - C#
+    - Unity
+  github: https://github.com/RajuKalidindi/Cubix
+  live_link:
+
+- title: Tic-Tac-Toe
+  image: logo.jpg
+  description: A two player tic-tac-toe game built for android.
+  technologies:
+    - Java
+    - XML
+    - Android
+  github: https://github.com/RajuKalidindi/Tic-Tac-Toe
+  live_link:
+
+- title: Portfolio Page
+  image: portfolio-site.png
+  description: The current page that you are looking at.
+  technologies:
+    - HTML
+    - CSS
+    - JS
+    - Ruby
+  github: https://github.com/RajuKalidindi/RajuKalidindi.github.io
+  live_link:
