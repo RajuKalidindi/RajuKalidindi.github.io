@@ -3814,6 +3814,54 @@ sup {
   margin-top: 10px;
   width: 100%;
 }
+.site-description {
+  width: 100%;
+  text-align: center;
+}
+
+.flip-text-wrapper {
+  perspective: 1000px;
+  height: 40px;
+  width: 100%;
+  text-align: start;
+}
+
+.flip-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.flip-text.front {
+  z-index: 2;
+}
+
+.flip-text.back {
+  transform: rotateX(180deg);
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateX(180deg) translateY(10px);
+  }
+  to {
+    transform: rotateX(0deg) translateY(0);
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateX(0deg) translateY(0);
+  }
+  to {
+    transform: rotateX(-180deg) translateY(-10px);
+  }
+}
 @media only screen and (min-width: 550px) {
   .header .site-description {
     font-size: 40px;

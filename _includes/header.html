@@ -2,7 +2,12 @@
   <div class="header">
     <h1>
       <div class="site-title">Raju Kalidindi</div>
-      <span class="site-description">{{site.user_title}}</span>
+      <span class="site-description">
+        <div class="flip-text-wrapper">
+          <span class="flip-text front">{{site.user_title}}</span>
+          <span class="flip-text back"></span>
+        </div>
+      </span>
     </h1>
     <a
       aria-label="My Github"
@@ -24,3 +29,34 @@
     ><i class="icon fa fa-chevron-down" aria-hidden="true"></i
   ></a>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const texts = [
+      "Software Engineer",
+      "Constant Smiler",
+      "Intrepid Explorer",
+      "Football Fanatic",
+      "Culinary Adventurer",
+    ];
+    const frontText = document.querySelector(".flip-text.front");
+    const backText = document.querySelector(".flip-text.back");
+    let currentIndex = 0;
+
+    function flipText() {
+      currentIndex = (currentIndex + 1) % texts.length;
+      backText.textContent = texts[currentIndex];
+
+      frontText.style.animation = "flipOut 0.5s forwards";
+      backText.style.animation = "flipIn 0.5s forwards";
+
+      setTimeout(() => {
+        frontText.textContent = texts[currentIndex];
+        frontText.style.animation = "";
+        backText.style.animation = "";
+        [frontText, backText] = [backText, frontText];
+      }, 600);
+    }
+
+    setInterval(flipText, 2000);
+  });
+</script>

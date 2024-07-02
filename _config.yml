@@ -38,7 +38,7 @@ plugins:
 
 # Google-analytics
 google-analytics:
-  id: ""
+  id: "G-FXB1Z4F39H"
 
 exclude: ["package.json", "src", "node_modules"]
 # Exclude from processing.
