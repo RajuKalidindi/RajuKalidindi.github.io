@@ -4612,6 +4612,12 @@ p {
   background-color: #5a52d5;
 }
 
+.icon-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
@@ -4631,12 +4637,10 @@ p {
   .connect-header {
     margin-top: 0;
   }
-}
 
-.icon-buttons-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+  .icon-buttons-container {
+    width: 100%;
+  }
 }
 
 .icon-button img {
