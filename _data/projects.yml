@@ -8,6 +8,16 @@
   github: https://github.com/RajuKalidindi/BikeStop
   live_link:
 
+- title: DinoVerse
+  image: DinoVerse.png
+  description: Explore the prehistoric world of dinosaurs with ancient wonders and cool facts.
+  technologies:
+    - Next.js
+    - Node.js
+    - MongoDb
+  github: https://github.com/RajuKalidindi/DinoVerse
+  live_link: https://dino-verse-phi.vercel.app/
+
 - title: Memory Game
   image: memory-game.png
   description: A memory game with minor animations.
@@ -98,14 +108,13 @@
     - Android
   github: https://github.com/RajuKalidindi/Tic-Tac-Toe
   live_link:
-
-- title: Portfolio Page
-  image: portfolio-site.png
-  description: The current page that you are looking at.
-  technologies:
-    - HTML
-    - CSS
-    - JS
-    - Ruby
-  github: https://github.com/RajuKalidindi/RajuKalidindi.github.io
-  live_link:
+# - title: Portfolio Page
+#   image: portfolio-site.png
+#   description: The current page that you are looking at.
+#   technologies:
+#     - HTML
+#     - CSS
+#     - JS
+#     - Ruby
+#   github: https://github.com/RajuKalidindi/RajuKalidindi.github.io
+#   live_link:
